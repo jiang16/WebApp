@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+
+		<!-- 主页面容器 -->
+		<div class="mui-inner-wrap">
+			<!-- 主页面标题 -->
+			<header class="mui-bar mui-bar-nav">
+				<!-- 显示侧边返回按钮 -->
+				<a class="mui-icon mui-icon-left-nav mui-action-back mui-pull-left"></a>
+				<h1 class="mui-title">帮助与反馈</h1>
+			</header>
+			<div class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<!-- 主界面具体展示内容 -->
+					<form action="#" method="post">
+						请在这里提出您对本APP的疑问或建议<br>
+						<textarea cols="20" rows="3"></textarea><br> 
+						请在这里留下您的邮箱，我们会尽快给您回复<br>						
+						<input type="text" id="email"><br><br>
+						<div style="text-align: center;">
+							<button type="button" class="mui-btn mui-btn-blue" onclick="checkEmail(document.getElementById('email').value)">提交</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+
+			function checkEmail(emailValue) {
+				var reg = new RegExp("^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$");
+				if(reg.test(emailValue)){
+					mui.alert(" 提交成功 ");
+					return true;
+				}
+				else{
+					mui.alert("您输入的邮箱不合法 ");
+					return false;	
+				}
+			};
+		</script>
+	</body>
+
+</html>

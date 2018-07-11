@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title></title>
+	    <script src="js/mui.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<!-- 底部导航栏 -->
+		<nav class="mui-bar mui-bar-tab" id="nav">
+			<a id="tab_home" class="mui-tab-item" >
+				<span class="mui-icon mui-icon-home" ></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a id="tab_message" class="mui-tab-item mui-active">
+				<span class="mui-icon mui-icon-chatboxes"></span>
+				<span class="mui-badge mui-badge-danger">1</span>
+				<span class="mui-tab-label">消息</span>
+			</a>
+			<a id="tab_person" class="mui-tab-item">
+				<span class="mui-icon mui-icon-person"></span>
+				<span class="mui-tab-label">我的</span>
+			</a>
+			<a id="tab_setting" class="mui-tab-item">
+				<span class="mui-icon mui-icon-gear"></span>
+				<span class="mui-tab-label">设置</span>
+			</a>
+		</nav>	
+		<script type="text/javascript" charset="utf-8">
+	      	mui.init();
+	      	document.getElementById('tab_home').addEventListener('tap', function() {
+	      		mui.openWindow({
+	      			url: 'index.html',
+	      			id: 'tab_home'
+	      		});
+	      	});
+	      	document.getElementById('tab_message').addEventListener('tap', function() {
+	      		mui.openWindow({
+	      			url: 'message.html',
+	      			id: 'tab_message'
+	      		});
+	      	});
+	      	document.getElementById('tab_person').addEventListener('tap', function() {
+	      		mui.openWindow({
+	      			url: 'person.html',
+	      			id: 'tab_person'
+	      		});
+	      	});
+	      	document.getElementById('tab_setting').addEventListener('tap', function() {
+	      		mui.openWindow({
+	      			url: 'setting.html',
+	      			id: 'tab_setting'
+	      		});
+	      	});
+		</script>
+		<div class="mui-content mui-active">
+			<div style="width: 100%; height: 62px; padding: 7px;">		
+				<hr />
+				<img src="img/tx.png" align="left"/>				
+				<div style="margin-left: 80px; font-size: 20px; font-weight: bold;">腾讯动漫</div>				
+				<div style="margin-left: 80px; margin-top: 10px; margin-bottom: 15px;">
+					嗨~ 你订阅的动漫又有更新了哟
+					<span class="mui-badge mui-badge-danger">1</span>
+				</div>		
+				<hr />
+			</div>			
+		</div>
+	</body>
+</html>

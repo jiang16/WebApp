@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title></title>
+	    <script src="js/mui.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<!-- 底部导航栏 -->
+		<nav class="mui-bar mui-bar-tab" id="nav">
+			<a id="tab_home" class="mui-tab-item" >
+				<span class="mui-icon mui-icon-home" ></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a id="tab_message" class="mui-tab-item">
+				<span class="mui-icon mui-icon-chatboxes"></span>
+				<span class="mui-badge mui-badge-danger">1</span>
+				<span class="mui-tab-label">消息</span>
+			</a>
+			<a id="tab_person" class="mui-tab-item">
+				<span class="mui-icon mui-icon-person"></span>
+				<span class="mui-tab-label">我的</span>
+			</a>
+			<a id="tab_setting" class="mui-tab-item mui-active">
+				<span class="mui-icon mui-icon-gear"></span>
+				<span class="mui-tab-label">设置</span>
+			</a>
+		</nav>	
+		<script type="text/javascript" charset="utf-8">
+	      	mui.init();
+	      	document.getElementById('tab_home').addEventListener('tap', function() {
+	      		mui.openWindow({
+	      			url: 'index.html',
+	      			id: 'tab_home'
+	      		});
+	      	});
+	      	document.getElementById('tab_message').addEventListener('tap', function() {
+	      		mui.openWindow({
+	      			url: 'message.html',
+	      			id: 'tab_message'
+	      		});
+	      	});
+	      	document.getElementById('tab_person').addEventListener('tap', function() {
+	      		mui.openWindow({
+	      			url: 'person.html',
+	      			id: 'tab_person'
+	      		});
+	      	});
+	      	document.getElementById('tab_setting').addEventListener('tap', function() {
+	      		mui.openWindow({
+	      			url: 'setting.html',
+	      			id: 'tab_setting'
+	      		});
+	      	});
+		</script>
+		<div class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<!-- 主界面具体展示内容 -->
+				<ul class="mui-table-view" id="listView">
+					<li class="mui-table-view-cell">
+						<a>
+							<div class="mui-input-row">
+							    <label>夜间模式</label>
+							    <div class="mui-switch mui-switch-blue">
+							        <div class="mui-switch-handle"></div>
+							    </div>
+							</div>
+						</a>						
+					</li>
+					<li class="mui-table-view-cell">
+						<a>
+							<div class="mui-input-row">
+							    <label>勿扰模式</label>
+							    <div class="mui-switch mui-switch-blue">
+							        <div class="mui-switch-handle"></div>
+							    </div>
+							</div>
+						</a>						
+					</li>
+					<li class="mui-table-view-cell">
+						<a>
+							<div class="mui-input-row">
+							    <label>新消息提醒</label>
+							    <div class="mui-switch mui-active mui-switch-blue">
+							        <div class="mui-switch-handle"></div>
+							    </div>
+							</div>
+						</a>						
+					</li>					
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							个性换肤
+						</a>
+					</li>
+					<li id="feedback" class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							问题与反馈
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							关于
+							<span class="mui-badge mui-badge-danger">1</span>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							退出
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">
+			document.getElementById("feedback").addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'html/feedback.html',
+					id: 'feedback'
+				});
+			})
+		</script>
+	</body>
+</html>
